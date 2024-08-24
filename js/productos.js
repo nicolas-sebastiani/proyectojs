@@ -17,12 +17,21 @@ let cart = []
 
 function addtoCart(Productoid){
     let product = productos.find(p => p.id === Productoid);
-    cart.push({
-        id: product.id,
-        nombre: product.nombre,
-        precio: product.precio,
-    })
-    localStorage.setItem('cart', JSON.stringify(cart))
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Verificar si el producto ya está en el carrito
+    if (!cart.some(p => p.id === Productoid)) {
+        cart.push({
+            id: product.id,
+            nombre: product.nombre,
+            precio: product.precio,
+            imagen: product.imagen,
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${product.nombre} agregado al carrito.`);
+    } else {
+        alert(`${product.nombre} ya está en el carrito.`);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const divProductos = document.getElementById('prodWrapper');
     const productosRow = document.createElement('div');
     productosRow.id = 'productosRow';
-    productosRow.className = 'row'
+    productosRow.className = 'row';
     
     main.appendChild(divProductos);
     
@@ -47,14 +56,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement('img');
         img.src = producto.imagen;
         img.alt = producto.nombre;
-        img.className = 'card-img-top ';
+        img.className = 'card-img-top';
+        img.style.alignSelf = 'center';
         // Crear cuerpo de la tarjeta
         const cardBody = document.createElement('div');
         cardBody.className = 'card-body';
         // Crear el nombre del producto
         const nombre = document.createElement('h3');
         nombre.textContent = producto.nombre;
-        nombre.className = 'card-title'
+        nombre.className = 'card-title';
         // Crear el precio del producto
         const precio = document.createElement('p');
         precio.textContent = `$${producto.precio}`;
@@ -62,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const botonAdd = document.createElement('button');
         botonAdd.textContent = 'Agregar al Carrito';
         botonAdd.id = 'botonAdd';
-        botonAdd.classList = 'btn btn-outline-success'
+        botonAdd.classList = 'btn btn-outline-success';
 
         botonAdd.addEventListener('click', () => {
             // alert(`${producto.nombre} agregado al carrito.`)

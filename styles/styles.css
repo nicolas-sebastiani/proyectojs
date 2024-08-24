@@ -86,3 +86,17 @@ img:hover {
     transform: scale(1.05);
     transition: transform 100ms linear;
 }
+
+h2 {
+    font-size: 3rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #c6e613;
+    margin-left: 3rem;
+    margin-top: 1rem;
+}
+
+.imgprods {
+    width: 75%;
+    height: auto;
+}

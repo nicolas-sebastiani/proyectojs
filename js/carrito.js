@@ -8,26 +8,19 @@ document.addEventListener('DOMContentLoaded', () => {
     carritoArray.forEach((producto, index) => {
         // Crear la columna
         const col = document.createElement('div');
-        col.className = 'col-md-4 mb-4';
+        // col.className = 'col-md-4 mb-4';
 
         // Crear la tarjeta
         const card = document.createElement('div');
-        card.className = 'card border border-success-subtle';
-        card.style.width = '14rem';
-
-        // Crear la imagen
-        const img = document.createElement('img');
-        img.src = producto.imagen;
-        img.alt = producto.nombre;
-        img.className = 'card-img-top';
-        img.style.alignSelf = 'center';
+        card.className = 'card border border-success-subtles';
+        card.style.width = '20rem';
 
         // Crear el cuerpo de la tarjeta
         const cardBody = document.createElement('div');
         cardBody.className = 'card-body';
 
         // Crear el nombre del producto
-        const nombre = document.createElement('h3');
+        const nombre = document.createElement('h4');
         nombre.textContent = producto.nombre;
         nombre.className = 'card-title';
 
@@ -44,13 +37,21 @@ document.addEventListener('DOMContentLoaded', () => {
             carritoArray.splice(index, 1);
             localStorage.setItem('cart', JSON.stringify(carritoArray));
             location.reload();
+            Toastify({
+                text: `Producto eliminado`,
+                className: "info",
+                duration: 2000,
+                style: {
+                    background: "linear-gradient(to left top, #4de782, #77e47a, #93e176, #aadd76, #bcda78)",
+                }
+            }).showToast();
         })
 
         // Añadir el nombre, precio y cuerpo a la tarjeta
         cardBody.appendChild(nombre);
         cardBody.appendChild(precio);
         cardBody.appendChild(botonDel);
-        card.appendChild(img);
+        // card.appendChild(img);
         card.appendChild(cardBody);
 
         // Añadir la tarjeta a la columna

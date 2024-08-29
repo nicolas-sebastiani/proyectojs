@@ -1,16 +1,16 @@
 const productos = [
-    { id: 1, nombre: 'Arroz Integral', precio: 5100, imagen: '../assets/arrozintegral.jpg' },
-    { id: 2, nombre: 'Lentejas', precio: 4400, imagen: '../assets/lenteja.jpg' },
-    { id: 3, nombre: 'Avena Arrollada', precio: 3900, imagen: '../assets/avena-arrollada-fina.jpg' },
-    { id: 4, nombre: 'Cebada Perlada', precio: 6000, imagen: '../assets/cebada-perlada.jpg' },
-    { id: 5, nombre: 'Couscous', precio: 2900, imagen: '../assets/couscous.jpg' },
-    { id: 6, nombre: 'Lenteja Turca', precio: 3500, imagen: '../assets/lenteja-turca.jpg' },
-    { id: 7, nombre: 'Poroto Pallar', precio: 3100, imagen: '../assets/poroto-pallar.jpg' },
-    { id: 8, nombre: 'Quinoa Roja', precio: 5150, imagen: '../assets/quinoa-roja.jpg' },
-    { id: 9, nombre: 'Soja Texturizada', precio: 6000, imagen: '../assets/soja-texturizada.jpg' },
-    { id: 10, nombre: 'Garbanzo', precio: 5850, imagen: '../assets/garbanzo.jpg' },
-    { id: 11, nombre: 'Poroto Tape', precio: 5000, imagen: '../assets/poroto-tape.jpg' },
-    { id: 12, nombre: 'Poroto Aduki', precio: 2900, imagen: '../assets/poroto-aduki.jpg' },
+    { id: 1, nombre: 'Arroz Integral', precio: 5100, imagen: '../assets/arrozintegral.jpg', cantidad: 1, unidad: "1Kg"  },
+    { id: 2, nombre: 'Lentejas', precio: 4400, imagen: '../assets/lenteja.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 3, nombre: 'Avena Arrollada', precio: 3900, imagen: '../assets/avena-arrollada-fina.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 4, nombre: 'Cebada Perlada', precio: 6000, imagen: '../assets/cebada-perlada.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 5, nombre: 'Couscous', precio: 2900, imagen: '../assets/couscous.jpg', cantidad: 1, unidad: "300Gr" },
+    { id: 6, nombre: 'Lenteja Turca', precio: 3500, imagen: '../assets/lenteja-turca.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 7, nombre: 'Poroto Pallar', precio: 3100, imagen: '../assets/poroto-pallar.jpg', cantidad: 1, unidad: "800Gr" },
+    { id: 8, nombre: 'Quinoa Roja', precio: 5150, imagen: '../assets/quinoa-roja.jpg', cantidad: 1, unidad: "500Gr" },
+    { id: 9, nombre: 'Soja Texturizada', precio: 6000, imagen: '../assets/soja-texturizada.jpg', cantidad: 1, unidad: "500Gr" },
+    { id: 10, nombre: 'Garbanzo', precio: 5850, imagen: '../assets/garbanzo.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 11, nombre: 'Poroto Tape', precio: 5000, imagen: '../assets/poroto-tape.jpg', cantidad: 1, unidad: "1Kg" },
+    { id: 12, nombre: 'Poroto Aduki', precio: 2900, imagen: '../assets/poroto-aduki.jpg', cantidad: 1, unidad: "1Kg" },
 ];
 
 let cart = []
@@ -26,6 +26,8 @@ function addtoCart(Productoid){
             nombre: product.nombre,
             precio: product.precio,
             imagen: product.imagen,
+            unidad: product.unidad,
+            cantidad: product.cantidad,
         });
         localStorage.setItem('cart', JSON.stringify(cart));
         Toastify({
@@ -81,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nombre.className = 'card-title';
         // Crear el precio del producto
         const precio = document.createElement('p');
-        precio.textContent = `$${producto.precio}`;
+        precio.textContent = `$${producto.precio} X ${producto.unidad}`;
         // Creat boton
         const botonAdd = document.createElement('button');
         botonAdd.textContent = 'Agregar al Carrito';

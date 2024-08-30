@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     productos.forEach(producto => {
         const columna = document.createElement('div');
-        columna.className = 'col-md-4 mb-4';
+        columna.className = 'col-md-3 mb-4';
         // Crear la tarjeta
         const card = document.createElement('div');
-        card.className = 'card border border-success-subtle';
-        card.style.width = '16rem';
+        card.className = 'card border border-success-subtle pb-1';
+        card.style.width = '14rem';
         // Crear la imagen
         const img = document.createElement('img');
         img.src = producto.imagen;
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const botonAdd = document.createElement('button');
         botonAdd.textContent = 'Agregar al Carrito';
         botonAdd.id = 'botonAdd';
-        botonAdd.classList = 'btn btn-outline-success';
+        botonAdd.classList = 'btn btn-outline-success btn-sm';
 
         botonAdd.addEventListener('click', () => {
             addtoCart(producto.id)

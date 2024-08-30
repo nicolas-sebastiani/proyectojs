@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
         precio.textContent = `$${producto.precio} X ${producto.unidad}`;
 
         // botones para aumentar y disminuir cantidad
-
         const botongrupo = document.createElement('div');
         botongrupo.id = 'botongrupo';
         botongrupo.className = 'btn-group';

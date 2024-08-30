@@ -123,6 +123,19 @@ h2 {
     color: #c6e613;
 }
 
-.bgcolor {
+.bgcolorlight {
     background-color: #f8f8de;
+}
+
+.bgcolordark {
+    background-color: #3d6042;
+    height: 1.5rem;
+}
+
+.fontcolorfoot {
+    color: #3d6042;
+}
+
+.divheight {
+    height: 3rem;
 }

@@ -139,3 +139,25 @@ h2 {
 .divheight {
     height: 3rem;
 }
+
+.bgimageindex{
+    background-image: url(../assets/bolsos.jpg);
+    object-fit: auto;
+    background-position: center top;
+    background-color: #f0f0f0;
+}
+
+.bgimagecontact{
+    background-image: url(../assets/arbejas.jpg);
+    object-fit: auto;
+    background-position: center top;
+    background-color: #f0f0f0;
+}
+
+.opa07 {
+    opacity: 0.7;
+}
+
+.opa1 {
+    opacity: 1;
+}

@@ -1,0 +1,98 @@
+[
+    {
+        "id": 3,
+        "nombre": "Avena Arrollada",
+        "precio": 3900,
+        "imagen": "../assets/avena-arrollada-fina.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 1,
+        "nombre": "Arroz Integral",
+        "precio": 5100,
+        "imagen": "../assets/arrozintegral.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 2,
+        "nombre": "Lentejas",
+        "precio": 4400,
+        "imagen": "../assets/lenteja.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 8,
+        "nombre": "Quinoa Roja",
+        "precio": 5150,
+        "imagen": "../assets/quinoa-roja.jpg",
+        "unidad": "500Gr",
+        "cantidad": 1
+    },
+    {
+        "id": 4,
+        "nombre": "Cebada Perlada",
+        "precio": 6000,
+        "imagen": "../assets/cebada-perlada.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 7,
+        "nombre": "Poroto Pallar",
+        "precio": 3100,
+        "imagen": "../assets/poroto-pallar.jpg",
+        "unidad": "800Gr",
+        "cantidad": 1
+    },
+    {
+        "id": 6,
+        "nombre": "Lenteja Turca",
+        "precio": 3500,
+        "imagen": "../assets/lenteja-turca.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 5,
+        "nombre": "Couscous",
+        "precio": 2900,
+        "imagen": "../assets/couscous.jpg",
+        "unidad": "300Gr",
+        "cantidad": 1
+    },
+    {
+        "id": 9,
+        "nombre": "Soja Texturizada",
+        "precio": 6000,
+        "imagen": "../assets/soja-texturizada.jpg",
+        "unidad": "500Gr",
+        "cantidad": 1
+    },
+    {
+        "id": 10,
+        "nombre": "Garbanzo",
+        "precio": 5850,
+        "imagen": "../assets/garbanzo.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 11,
+        "nombre": "Poroto Tape",
+        "precio": 5000,
+        "imagen": "../assets/poroto-tape.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    },
+    {
+        "id": 12,
+        "nombre": "Poroto Aduki",
+        "precio": 2900,
+        "imagen": "../assets/poroto-aduki.jpg",
+        "unidad": "1Kg",
+        "cantidad": 1
+    }
+]

@@ -10,7 +10,6 @@ fetch("/productos.json")
 function addtoCart(Productoid){
     let product = productos.find(p => p.id === Productoid);
     cart = JSON.parse(localStorage.getItem('cart')) || [];
-
     // Verificar si el producto ya está en el carrito
     if (!cart.some(p => p.id === Productoid)) {
         cart.push({
@@ -69,7 +68,7 @@ function createCards(productos){
         // Crear el nombre del producto
         const nombre = document.createElement('h3');
         nombre.textContent = producto.nombre;
-        nombre.className = 'card-title opa1';
+        nombre.className = 'card-title opa1 fw-bold';
         // Crear el precio del producto
         const precio = document.createElement('p');
         precio.textContent = `$${producto.precio} X ${producto.unidad}`;
